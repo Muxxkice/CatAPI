@@ -48,26 +48,31 @@ export function Main() {
 
 	return (
 		<main>
-			<div className="randomcat_container">
+			<section className="randomcat_container">
 				<Image catImg={catImg} />
-				<button onClick={getImg}>Random</button>
-			</div>
-			<Form name={catlist}
-				handleSubmit={handleSubmit}
-				onSubmitImage={breedImage}
-				selectedCat={selectedCat}
-				selectName={selectName}
-			/>
-			<div className="breedcat_container">
-				<CatSwiper
-					onSubmitImage={breedImage}
-					breedCat={selectedCat}
-				/>
-				<div className="cat_information">
-					<p>猫の名前</p>
-					<p>猫の情報</p>
+				<div>
+					<button onClick={getImg}>Random</button>
 				</div>
-			</div>
+			</section>
+
+			<section className="breedcat_container">
+				<Form name={catlist}
+					handleSubmit={handleSubmit}
+					onSubmitImage={breedImage}
+					selectedCat={selectedCat}
+					selectName={selectName}
+				/>
+				<div className="catswiper">
+					<CatSwiper
+						onSubmitImage={breedImage}
+						breedCat={selectedCat}
+					/>
+					<div className="cat_information">
+						<p>猫の名前</p>
+						<p>猫の情報</p>
+					</div>
+				</div>
+			</section>
 		</main>
 	)
 }
