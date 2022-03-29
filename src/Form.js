@@ -5,7 +5,7 @@ export function Form(props) {
 	})
 
 	return (
-		<section className="gellery">
+		<section className="form_submit">
 			<form onChange={props.handleSubmit} >
 				<select onChange={props.onSubmitImage}>
 					<option value="" id="" selected>Pick</option>

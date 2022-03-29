@@ -6,7 +6,63 @@ header h1 {
   font-size: 30px;
   color: #ffffff;
 }
+p {
+  padding: 2px;
+}
+button{
+  border: 1px solid #000;
+  width: 80px;
+  margin: 10px;
 
+  border-radius: 0;
+  background: #fff;
+
+  -webkit-transform-style: preserve-3d;
+
+  transform-style: preserve-3d;
+}
+
+button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  content: '';
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+  background: #000;
+}
+
+button:hover {
+  color: #fff;
+  background: #000;
+}
+
+button:hover:before {
+  background: #fff;
+}
+form{
+  border: 1px solid #000;
+  width: 180px;
+  border-radius: 0;
+  background: #fff;
+}
+.randomcat_container {
+  height: 600px;
+  margin: 0 auto;
+
+}
+img {
+  margin: 10px;
+}
+form input {
+  border:none;
+  outline: none;
+}
 .Catlist img {
 	width: 300px;
 }
@@ -24,22 +80,31 @@ width:100%;
 .swiper-slide {
   /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
   color: #ffffff;
-  width: 100px;
-  height: 600px;
+  width: 200px;
+  height: 500px;
   text-align: center;
   line-height: 300px;
+
 }
-.swiper-slide:nth-child(3n + 1) {
-  /*1、4、7、3n+1枚目の背景色 */
+/* .swiper-slide:nth-child(3n + 1) {
   background-color: #de4439;
 }
-
 .swiper-slide:nth-child(3n + 2) {
-  /*2、5、8、3n+2枚目の背景色 */
+
   background-color: #fcd500;
 }
-
 .swiper-slide:nth-child(3n + 3) {
-  /*3、6、9、3n+3枚目の背景色 */
   background-color: #53c638;
+} */
+
+.breedcat_container{
+  height: 700px
+}
+.cat_information {
+  margin-top: 20px;
+}
+
+footer {
+  height: 80px;
+  padding-bottom: 20px;
 }

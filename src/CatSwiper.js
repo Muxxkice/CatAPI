@@ -7,17 +7,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-
 export function CatSwiper(props) {
   const cat = props.breedCat //選択された猫の画像
-  console.log(cat)
-
-  //breedImage 選択された猫の負画像を取得
-  // const breedcatimg = cat.map((c) => (
-  //   <SwiperSlide key ={c}>
-  //     <img key ={c} src={c}></img>
-  //   </SwiperSlide>
-  // ))
 
   return (
     <Swiper
@@ -31,9 +22,7 @@ export function CatSwiper(props) {
       onSwiper={console.log('change')}
       onSlideChange={props.onSubmitImage}
     >
-
-
-     <SwiperSlide >
+     <SwiperSlide>
       <img src={cat}></img>
       </SwiperSlide>
       <SwiperSlide >
@@ -44,8 +33,7 @@ export function CatSwiper(props) {
       </SwiperSlide>
       <SwiperSlide>
       <img src={cat}></img>
-      </SwiperSlide> */}
-      ...
+      </SwiperSlide>
     </Swiper>
   )
 }
