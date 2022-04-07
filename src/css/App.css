@@ -30,9 +30,9 @@ button:before {
   width: 5px;
   height: 100%;
 
-  content: '';
+  /* content: '';
   -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all .3s; */
 
   background: #000;
 }

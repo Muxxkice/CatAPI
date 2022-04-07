@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Image from "./Image";
 import Form from "./Form";
 import CatSwiper from "./CatSwiper";
+import { set } from "react-hook-form";
 
 export function Main() {
 
@@ -11,6 +12,11 @@ export function Main() {
 	const [catlist, setCatlist] = useState([]); //取得した猫のリスト
 	const [selectName, setselectName] = useState("");//選択された猫を保持
 	const [selectedCat, setselectedCat] = useState([]);//選択した猫の画像
+	const [name, setName] = useState('')
+	const [origin, setOrigin] = useState('')
+	const [description, setDescription] = useState('')
+	const [pict, setPict] = useState('')
+
 
 	function getImg() {
 		fetch('https://api.thecatapi.com/v1/images/search')
@@ -23,7 +29,15 @@ export function Main() {
 	}
 	function handleSubmit(event) {
 		event.preventDefault();
-		setselectName(event.target.value);
+		const selectCat = catlist.find((cat) => {
+			return cat.id === event.target.value
+		})
+		setPict(selectCat.image.url)
+		setName(selectCat.name)
+		setOrigin(selectCat.origin)
+		setDescription(selectCat.description)
+		setselectName(event.target.value)
+
 	}
 
 	function breedImage() {
@@ -64,12 +78,14 @@ export function Main() {
 				/>
 				<div className="catswiper">
 					<CatSwiper
+					  firstImg={pict}
 						onSubmitImage={breedImage}
 						breedCat={selectedCat}
 					/>
 					<div className="cat_information">
-						<p>猫の名前</p>
-						<p>猫の情報</p>
+						<p>{name}</p>
+						<p>{origin}</p>
+						<p>{description}</p>
 					</div>
 				</div>
 			</section>
