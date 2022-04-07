@@ -19,20 +19,19 @@ export function CatSwiper(props) {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={console.log('change')}
       onSlideChange={props.onSubmitImage}
     >
-     <SwiperSlide>
-      <img src={cat}></img>
+      <SwiperSlide>
+        <img src={props.firstImg}></img>
       </SwiperSlide>
       <SwiperSlide >
-      <img src={cat}></img>
+        <img src={cat}></img>
       </SwiperSlide>
       <SwiperSlide >
-      <img src={cat}></img>
+        <img src={cat}></img>
       </SwiperSlide>
       <SwiperSlide>
-      <img src={cat}></img>
+        <img src={cat}></img>
       </SwiperSlide>
     </Swiper>
   )
