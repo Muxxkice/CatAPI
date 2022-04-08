@@ -5,16 +5,14 @@ import { Footer } from './Footer';
 import './css/App.css';
 import './css/destyle.css'
 
-// import 'swiper/css';
-// import Swiper from 'swiper';
 function App() {
 
-    return (
-      <>
-        <Header />
-        <Main />
-        <Footer />
-      </>
-    )
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  )
 }
 export default App;
